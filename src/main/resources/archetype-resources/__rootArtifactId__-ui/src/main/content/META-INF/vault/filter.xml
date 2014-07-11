@@ -1,0 +1,15 @@
+#set( $symbol_pound = '#' )
+#set( $symbol_dollar = '$' )
+#set( $symbol_escape = '\' )
+<?xml version="1.0" encoding="UTF-8"?>
+<workspaceFilter version="1.0">
+    <filter root="/apps/bedrock/components" />
+    <filter root="/apps/bedrock/install" />
+    <filter root="/apps/${rootArtifactId}/components" />
+    <filter root="/apps/${rootArtifactId}/templates" />
+    <filter root="/apps/${rootArtifactId}/install" />
+    <filter root="/etc/clientlibs/bedrock" />
+    <filter root="/etc/designs/${rootArtifactId}">
+        <exclude pattern="/etc/designs/${rootArtifactId}/jcr:content(/.*)?"/>
+    </filter>
+</workspaceFilter>
