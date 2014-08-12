@@ -136,6 +136,7 @@
             <plugin>
                 <groupId>com.citytechinc.maven.plugins</groupId>
                 <artifactId>cq-package-maven-plugin</artifactId>
+                <version>0.4.0</version>
                 <executions>
                     <execution>
                         <phase>install</phase>
@@ -150,6 +151,7 @@
                     <username>${cq.username}</username>
                     <password>${cq.password}</password>
                     <skip>${package.skip}</skip>
+                    <installRecursive>true</installRecursive>
                 </configuration>
             </plugin>
             <plugin>

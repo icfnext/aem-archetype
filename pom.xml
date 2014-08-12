@@ -1,49 +1,62 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<project xmlns="http://maven.apache.org/POM/4.0.0"
-         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
-    <modelVersion>4.0.0</modelVersion>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
 
-    <groupId>com.citytechinc.aem</groupId>
-    <artifactId>aem-maven-archetype</artifactId>
-    <version>1.0.0</version>
-    <packaging>maven-archetype</packaging>
-    <name>aem-maven-archetype</name>
+	<groupId>com.citytechinc.aem</groupId>
+	<artifactId>aem-maven-archetype</artifactId>
+	<version>1.1.0</version>
+	<packaging>maven-archetype</packaging>
+	<name>aem-maven-archetype</name>
 
-    <scm>
-        <connection>scm:git:git@github.com:Citytechinc/aem-archetype.git</connection>
-        <url>https://github.com/Citytechinc/aem-archetype</url>
-        <developerConnection>scm:git:git@github.com:Citytechinc/aem-archetype.git
+	<scm>
+		<connection>scm:git:git@github.com:Citytechinc/aem-archetype.git</connection>
+		<url>https://github.com/Citytechinc/aem-archetype</url>
+		<developerConnection>scm:git:git@github.com:Citytechinc/aem-archetype.git
         </developerConnection>
-    </scm>
+	</scm>
 
-    <distributionManagement>
-        <repository>
-            <id>citytech-releases</id>
-            <url>http://nexus.citytech.ctmsp.com/content/repositories/releases</url>
-        </repository>
-        <snapshotRepository>
-            <id>citytech-snapshots</id>
-            <url>http://nexus.citytech.ctmsp.com/content/repositories/snapshots</url>
-            <uniqueVersion>false</uniqueVersion>
-        </snapshotRepository>
-    </distributionManagement>
+	<distributionManagement>
+		<repository>
+			<id>citytech-releases</id>
+			<url>http://nexus.citytech.ctmsp.com/content/repositories/releases</url>
+		</repository>
+		<snapshotRepository>
+			<id>citytech-snapshots</id>
+			<url>http://nexus.citytech.ctmsp.com/content/repositories/snapshots</url>
+			<uniqueVersion>false</uniqueVersion>
+		</snapshotRepository>
+	</distributionManagement>
 
-    <build>
-        <extensions>
-            <extension>
-                <groupId>org.apache.maven.archetype</groupId>
-                <artifactId>archetype-packaging</artifactId>
-                <version>2.2</version>
-            </extension>
-        </extensions>
-        <pluginManagement>
-            <plugins>
-                <plugin>
-                    <artifactId>maven-archetype-plugin</artifactId>
-                    <version>2.2</version>
-                </plugin>
-            </plugins>
-        </pluginManagement>
-    </build>
+	<build>
+		<extensions>
+			<extension>
+				<groupId>org.apache.maven.archetype</groupId>
+				<artifactId>archetype-packaging</artifactId>
+				<version>2.2</version>
+			</extension>
+		</extensions>
+		<pluginManagement>
+			<plugins>
+				<plugin>
+					<artifactId>maven-archetype-plugin</artifactId>
+					<version>2.2</version>
+				</plugin>
+			</plugins>
+		</pluginManagement>
+		<plugins>
+			<plugin>
+				<groupId>external.atlassian.jgitflow</groupId>
+				<artifactId>jgitflow-maven-plugin</artifactId>
+				<version>1.0-m1</version>
+				<configuration>
+					<flowInitContext>
+						<featureBranchPrefix>feature/</featureBranchPrefix>
+						<releaseBranchPrefix>release/</releaseBranchPrefix>
+						<hotfixBranchPrefix>hotfix/</hotfixBranchPrefix>
+					</flowInitContext>
+					<autoVersionSubmodules>true</autoVersionSubmodules>
+				</configuration>
+			</plugin>
+		</plugins>
+	</build>
 </project>
