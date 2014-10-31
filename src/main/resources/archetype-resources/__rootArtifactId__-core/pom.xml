@@ -29,7 +29,9 @@
                         <Bundle-Name>${project.name}</Bundle-Name>
                         <Bundle-Vendor>${project.parent.organization.name}</Bundle-Vendor>
                         <Export-Package>!*.impl,${package}.*</Export-Package>
+                        <Require-Bundle>org.apache.sling.models.api</Require-Bundle>
                         <Import-Package>!com.citytechinc.aem.bedrock.core.components.*,!javassist</Import-Package>
+                        <Sling-Model-Packages>${package}</Sling-Model-Packages>
                         <DynamicImport-Package>*</DynamicImport-Package>
                     </instructions>
                 </configuration>
