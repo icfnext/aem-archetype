@@ -6,7 +6,7 @@
     <parent>
         <groupId>com.citytechinc.aem.bedrock</groupId>
         <artifactId>bedrock</artifactId>
-        <version>1.1.1</version>
+        <version>3.1.0</version>
     </parent>
 
     <modelVersion>4.0.0</modelVersion>
@@ -47,7 +47,8 @@
         <core.artifactId>${rootArtifactId}-core</core.artifactId>
 
         <!-- versions -->
-        <bedrock.version>1.1.1</bedrock.version>
+        <bedrock.version>3.1.0</bedrock.version>
+        <multicompositeaddon.version>1.0.0</multicompositeaddon.version>
 
         <!-- defaults -->
         <package.skip>true</package.skip>
@@ -104,6 +105,11 @@
                 <artifactId>bedrock-ui</artifactId>
                 <version>${bedrock.version}</version>
                 <type>zip</type>
+            </dependency>
+            <dependency>
+                <groupId>com.citytechinc.aem</groupId>
+                <artifactId>multicomposite-addon</artifactId>
+                <version>${multicompositeaddon.version}</version>
             </dependency>
         </dependencies>
     </dependencyManagement>

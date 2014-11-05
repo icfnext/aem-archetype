@@ -185,6 +185,12 @@
             <version>${project.version}</version>
         </dependency>
         <dependency>
+            <groupId>com.citytechinc.aem</groupId>
+            <artifactId>multicomposite-addon</artifactId>
+            <version>${multicompositeaddon.version}</version>
+            <type>zip</type>
+        </dependency>
+        <dependency>
             <groupId>com.citytechinc.aem.bedrock</groupId>
             <artifactId>bedrock-ui</artifactId>
             <type>zip</type>
