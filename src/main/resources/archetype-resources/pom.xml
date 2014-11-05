@@ -69,6 +69,8 @@
                 <osgi.bundle.status.skip>false</osgi.bundle.status.skip>
                 <cq.host>localhost</cq.host>
                 <cq.port>4502</cq.port>
+                <cq.port.author>4502</cq.port.author>
+                <cq.port.publish>4503</cq.port.publish>
                 <cq.username>admin</cq.username>
                 <cq.password>admin</cq.password>
             </properties>
