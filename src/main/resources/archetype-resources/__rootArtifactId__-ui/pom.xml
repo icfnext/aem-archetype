@@ -53,10 +53,10 @@
                                     <bundleNames>
                                         <bundleName>${core.artifactId}</bundleName>
                                     </bundleNames>
-                                    <host>${cq.host}</host>
+                                    <host>${cq.host.publish}</host>
                                     <port>${cq.port.publish}</port>
-                                    <username>${cq.username}</username>
-                                    <password>${cq.password}</password>
+                                    <username>${cq.username.publish}</username>
+                                    <password>${cq.password.publish}</password>
                                 </configuration>
                             </execution>
                         </executions>
@@ -146,10 +146,10 @@
                     </execution>
                 </executions>
                 <configuration>
-                    <host>${cq.host}</host>
-                    <port>${cq.port}</port>
-                    <username>${cq.username}</username>
-                    <password>${cq.password}</password>
+                    <host>${cq.host.author}</host>
+                    <port>${cq.port.author}</port>
+                    <username>${cq.username.author}</username>
+                    <password>${cq.password.author}</password>
                     <skip>${package.skip}</skip>
                     <installRecursive>true</installRecursive>
                 </configuration>
@@ -167,10 +167,10 @@
                             <bundleNames>
                                 <bundleName>${core.artifactId}</bundleName>
                             </bundleNames>
-                            <host>${cq.host}</host>
+                            <host>${cq.host.author}</host>
                             <port>${cq.port.author}</port>
-                            <username>${cq.username}</username>
-                            <password>${cq.password}</password>
+                            <username>${cq.username.author}</username>
+                            <password>${cq.password.author}</password>
                         </configuration>
                     </execution>
                 </executions>
