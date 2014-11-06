@@ -3,11 +3,10 @@
 #set( $symbol_escape = '\' )
 <?xml version="1.0" encoding="UTF-8"?>
 <workspaceFilter version="1.0">
-    <filter root="/apps/${rootArtifactId}/components" />
-    <filter root="/apps/${rootArtifactId}/templates" />
-    <filter root="/apps/${rootArtifactId}/install" />
+    <filter root="/apps/${rootArtifactId}" />
     <filter root="/etc/designs/${rootArtifactId}">
         <exclude pattern="/etc/designs/${rootArtifactId}/jcr:content(/.*)?"/>
     </filter>
     <filter root="/etc/packages/bedrock/bedrock-ui-${bedrock.version}.zip"/>
+    <filter root="/etc/packages/multicompositeaddon/multicomposite-addon-${multicompositeaddon.version}.zip"/>
 </workspaceFilter>

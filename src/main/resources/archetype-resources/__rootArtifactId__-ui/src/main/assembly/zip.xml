@@ -39,6 +39,15 @@
             <useStrictFiltering>true</useStrictFiltering>
         </dependencySet>
         <dependencySet>
+            <outputDirectory>jcr_root/etc/packages/multicompositeaddon</outputDirectory>
+            <useProjectArtifact>false</useProjectArtifact>
+            <scope>compile</scope>
+            <includes>
+                <include>com.citytechinc.aem:multicomposite-addon:zip</include>
+            </includes>
+            <useStrictFiltering>true</useStrictFiltering>
+        </dependencySet>
+        <dependencySet>
             <outputDirectory>jcr_root/apps/${rootArtifactId}/install</outputDirectory>
             <useProjectArtifact>false</useProjectArtifact>
             <scope>compile</scope>

@@ -30,6 +30,8 @@
                         <Bundle-Vendor>${project.parent.organization.name}</Bundle-Vendor>
                         <Export-Package>!*.impl,${package}.*</Export-Package>
                         <Import-Package>!com.citytechinc.aem.bedrock.core.components.*,!javassist</Import-Package>
+                        <Require-Bundle>org.apache.sling.models.api</Require-Bundle>
+                        <Sling-Model-Packages>${package}</Sling-Model-Packages>
                         <DynamicImport-Package>*</DynamicImport-Package>
                     </instructions>
                 </configuration>
@@ -177,6 +179,10 @@
         <dependency>
             <groupId>com.citytechinc.cq.cq-component-plugin</groupId>
             <artifactId>cq-component-annotations</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>com.citytechinc.aem</groupId>
+            <artifactId>multicomposite-addon</artifactId>
         </dependency>
     </dependencies>
 </project>

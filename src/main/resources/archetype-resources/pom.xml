@@ -6,7 +6,7 @@
     <parent>
         <groupId>com.citytechinc.aem.bedrock</groupId>
         <artifactId>bedrock</artifactId>
-        <version>1.1.1</version>
+        <version>3.1.1</version>
     </parent>
 
     <modelVersion>4.0.0</modelVersion>
@@ -47,7 +47,8 @@
         <core.artifactId>${rootArtifactId}-core</core.artifactId>
 
         <!-- versions -->
-        <bedrock.version>1.1.1</bedrock.version>
+        <bedrock.version>3.1.1</bedrock.version>
+        <multicompositeaddon.version>1.0.0</multicompositeaddon.version>
 
         <!-- defaults -->
         <package.skip>true</package.skip>
@@ -66,10 +67,14 @@
             <properties>
                 <package.skip>false</package.skip>
                 <osgi.bundle.status.skip>false</osgi.bundle.status.skip>
-                <cq.host>localhost</cq.host>
-                <cq.port>4502</cq.port>
-                <cq.username>admin</cq.username>
-                <cq.password>admin</cq.password>
+                <cq.host.author>localhost</cq.host.author>
+                <cq.host.publish>localhost</cq.host.publish>
+                <cq.port.author>4502</cq.port.author>
+                <cq.port.publish>4503</cq.port.publish>
+                <cq.username.author>admin</cq.username.author>
+                <cq.username.publish>admin</cq.username.publish>
+                <cq.password.author>admin</cq.password.author>
+                <cq.password.publish>admin</cq.password.publish>
             </properties>
         </profile>
     </profiles>
@@ -104,6 +109,11 @@
                 <artifactId>bedrock-ui</artifactId>
                 <version>${bedrock.version}</version>
                 <type>zip</type>
+            </dependency>
+            <dependency>
+                <groupId>com.citytechinc.aem</groupId>
+                <artifactId>multicomposite-addon</artifactId>
+                <version>${multicompositeaddon.version}</version>
             </dependency>
         </dependencies>
     </dependencyManagement>
