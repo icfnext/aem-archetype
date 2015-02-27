@@ -6,7 +6,7 @@
     <parent>
         <groupId>com.citytechinc.aem.bedrock</groupId>
         <artifactId>bedrock</artifactId>
-        <version>3.1.1</version>
+        <version>3.3.0</version>
     </parent>
 
     <modelVersion>4.0.0</modelVersion>
@@ -47,13 +47,13 @@
         <core.artifactId>${rootArtifactId}-core</core.artifactId>
 
         <!-- versions -->
-        <bedrock.version>3.1.1</bedrock.version>
+        <bedrock.version>3.3.0</bedrock.version>
         <multicompositeaddon.version>1.0.0</multicompositeaddon.version>
 
         <!-- defaults -->
         <package.skip>true</package.skip>
         <osgi.bundle.status.skip>true</osgi.bundle.status.skip>
-        <cq.username>admin</cq.username>
+        <aem.username>admin</aem.username>
     </properties>
 
     <profiles>
@@ -67,14 +67,14 @@
             <properties>
                 <package.skip>false</package.skip>
                 <osgi.bundle.status.skip>false</osgi.bundle.status.skip>
-                <cq.host.author>localhost</cq.host.author>
-                <cq.host.publish>localhost</cq.host.publish>
-                <cq.port.author>4502</cq.port.author>
-                <cq.port.publish>4503</cq.port.publish>
-                <cq.username.author>admin</cq.username.author>
-                <cq.username.publish>admin</cq.username.publish>
-                <cq.password.author>admin</cq.password.author>
-                <cq.password.publish>admin</cq.password.publish>
+                <aem.host.author>localhost</aem.host.author>
+                <aem.host.publish>localhost</aem.host.publish>
+                <aem.port.author>4502</aem.port.author>
+                <aem.port.publish>4503</aem.port.publish>
+                <aem.username.author>admin</aem.username.author>
+                <aem.username.publish>admin</aem.username.publish>
+                <aem.password.author>admin</aem.password.author>
+                <aem.password.publish>admin</aem.password.publish>
             </properties>
         </profile>
     </profiles>
