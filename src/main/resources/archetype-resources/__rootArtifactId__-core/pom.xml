@@ -179,10 +179,12 @@
         <dependency>
             <groupId>com.citytechinc.cq.cq-component-plugin</groupId>
             <artifactId>cq-component-annotations</artifactId>
+            <version>${component.plugin.version}</version>
         </dependency>
         <dependency>
             <groupId>com.citytechinc.aem</groupId>
             <artifactId>multicomposite-addon</artifactId>
+            <version>${multicompositeaddon.version}</version>
         </dependency>
     </dependencies>
 </project>
