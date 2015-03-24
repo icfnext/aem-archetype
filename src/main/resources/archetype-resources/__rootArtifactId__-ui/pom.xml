@@ -53,10 +53,10 @@
                                     <bundleNames>
                                         <bundleName>${core.artifactId}</bundleName>
                                     </bundleNames>
-                                    <host>${cq.host.publish}</host>
-                                    <port>${cq.port.publish}</port>
-                                    <username>${cq.username.publish}</username>
-                                    <password>${cq.password.publish}</password>
+                                    <host>${aem.host.publish}</host>
+                                    <port>${aem.port.publish}</port>
+                                    <username>${aem.username.publish}</username>
+                                    <password>${aem.password.publish}</password>
                                 </configuration>
                             </execution>
                         </executions>
@@ -119,6 +119,7 @@
             <plugin>
                 <groupId>com.citytechinc.cq.cq-component-plugin</groupId>
                 <artifactId>cq-component-maven-plugin</artifactId>
+                <version>${component.plugin.version}</version>
                 <extensions>true</extensions>
                 <executions>
                     <execution>
@@ -146,10 +147,10 @@
                     </execution>
                 </executions>
                 <configuration>
-                    <host>${cq.host.author}</host>
-                    <port>${cq.port.author}</port>
-                    <username>${cq.username.author}</username>
-                    <password>${cq.password.author}</password>
+                    <host>${aem.host.author}</host>
+                    <port>${aem.port.author}</port>
+                    <username>${aem.username.author}</username>
+                    <password>${aem.password.author}</password>
                     <skip>${package.skip}</skip>
                     <installRecursive>true</installRecursive>
                 </configuration>
@@ -167,10 +168,10 @@
                             <bundleNames>
                                 <bundleName>${core.artifactId}</bundleName>
                             </bundleNames>
-                            <host>${cq.host.author}</host>
-                            <port>${cq.port.author}</port>
-                            <username>${cq.username.author}</username>
-                            <password>${cq.password.author}</password>
+                            <host>${aem.host.author}</host>
+                            <port>${aem.port.author}</port>
+                            <username>${aem.username.author}</username>
+                            <password>${aem.password.author}</password>
                         </configuration>
                     </execution>
                 </executions>
