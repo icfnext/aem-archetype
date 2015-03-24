@@ -48,7 +48,7 @@
 
         <!-- versions -->
         <bedrock.version>3.3.0</bedrock.version>
-        <multicompositeaddon.version>1.0.0</multicompositeaddon.version>
+        <multicompositeaddon.version>1.0.1</multicompositeaddon.version>
 
         <!-- defaults -->
         <package.skip>true</package.skip>
