@@ -6,7 +6,7 @@
     <parent>
         <groupId>com.citytechinc.aem.bedrock</groupId>
         <artifactId>bedrock</artifactId>
-        <version>3.3.0</version>
+        <version>4.0.0-SNAPSHOT</version>
     </parent>
 
     <modelVersion>4.0.0</modelVersion>
@@ -47,7 +47,7 @@
         <core.artifactId>${rootArtifactId}-core</core.artifactId>
 
         <!-- versions -->
-        <bedrock.version>3.3.0</bedrock.version>
+        <bedrock.version>4.0.0-SNAPSHOT</bedrock.version>
         <multicompositeaddon.version>1.0.1</multicompositeaddon.version>
         <component.plugin.version>3.1.0</component.plugin.version>
 
