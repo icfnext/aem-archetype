@@ -40,6 +40,9 @@
                 <groupId>org.apache.felix</groupId>
                 <artifactId>maven-scr-plugin</artifactId>
                 <extensions>true</extensions>
+                <configuration>
+                    <scanClasses>true</scanClasses>
+                </configuration>
                 <executions>
                     <execution>
                         <id>generate-scr-scrdescriptor</id>
@@ -161,14 +164,18 @@
             <artifactId>jackson-databind</artifactId>
         </dependency>
         <dependency>
-            <groupId>com.google.guava</groupId>
-            <artifactId>guava</artifactId>
-        </dependency>
+			<groupId>com.adobe.granite.osgi.wrapper</groupId>
+			<artifactId>com.adobe.granite.osgi.wrapper.guava</artifactId>
+		</dependency>
 
         <!-- Bedrock library -->
         <dependency>
             <groupId>com.citytechinc.aem.bedrock</groupId>
             <artifactId>bedrock-api</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>com.citytechinc.aem.bedrock</groupId>
+            <artifactId>bedrock-models</artifactId>
         </dependency>
         <dependency>
             <groupId>com.citytechinc.aem.bedrock</groupId>
@@ -184,7 +191,6 @@
         <dependency>
             <groupId>com.citytechinc.aem</groupId>
             <artifactId>multicomposite-addon</artifactId>
-            <version>${multicompositeaddon.version}</version>
         </dependency>
     </dependencies>
 </project>

@@ -4,7 +4,7 @@ For use with AEM 6.1
 
 Bedrock
 ----------
-Currently using library version 4.0.0-SNAPSHOT
+Currently using library version 4.0.0
 
 Example Usage:
 --------------
