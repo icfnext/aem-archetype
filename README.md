@@ -6,6 +6,14 @@ Bedrock
 ----------
 Currently using library version 4.0.0
 
+CQ Component Maven Plugin
+----------
+Currently using library version 4.0.0
+
+Multicomposite Add On
+----------
+Currently using library version 2.0.0
+
 Example Usage:
 --------------
 
