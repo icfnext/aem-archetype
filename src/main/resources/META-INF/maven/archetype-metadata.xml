@@ -19,7 +19,7 @@
     <modules>
         <module id="${rootArtifactId}-core" dir="__rootArtifactId__-core" name="${rootArtifactId}-core">
             <fileSets>
-                <fileSet packaged="true" encoding="UTF-8">
+                <fileSet packaged="true" encoding="UTF-8" filtered="true">
                     <directory>src/main/groovy</directory>
                 </fileSet>
                 <fileSet packaged="true" encoding="UTF-8" filtered="true">
@@ -54,6 +54,7 @@
                     <directory>src/main/content</directory>
                     <includes>
                         <include>**/*.jsp</include>
+                        <include>**/*.html</include>
                         <include>**/*.xml</include>
                     </includes>
                 </fileSet>
