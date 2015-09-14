@@ -55,6 +55,7 @@
 						<hotfixBranchPrefix>hotfix/</hotfixBranchPrefix>
 					</flowInitContext>
 					<autoVersionSubmodules>true</autoVersionSubmodules>
+					<noDeploy>true</noDeploy>
 				</configuration>
 			</plugin>
 		</plugins>
