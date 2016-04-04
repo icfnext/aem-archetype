@@ -7,6 +7,6 @@
     <filter root="/etc/designs/${rootArtifactId}">
         <exclude pattern="/etc/designs/${rootArtifactId}/jcr:content(/.*)?"/>
     </filter>
-    <filter root="/etc/packages/bedrock/bedrock-ui-${bedrock.version}.zip"/>
+    <filter root="/etc/packages/aem-library/aem-library-ui-${aem.library.version}.zip"/>
     <filter root="/etc/packages/multicompositeaddon/multicomposite-addon-${multicompositeaddon.version}.zip"/>
 </workspaceFilter>

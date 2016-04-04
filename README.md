@@ -2,9 +2,9 @@ AEM Maven Archetype
 =============
 For use with AEM 6.1
 
-Bedrock
-----------
-Currently using library version 5.0.0
+AEM Library
+-----------
+Currently using library version 6.0.0
 
 CQ Component Maven Plugin
 ----------
