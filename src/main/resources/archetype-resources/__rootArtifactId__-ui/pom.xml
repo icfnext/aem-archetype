@@ -43,6 +43,7 @@
                     <plugin>
                         <groupId>com.icfolson.maven.plugins</groupId>
                         <artifactId>osgi-bundle-status-maven-plugin</artifactId>
+                        <version>${osgi.bundle.status.plugin.version}</version>
                         <executions>
                             <execution>
                                 <id>status-publish</id>
@@ -137,7 +138,7 @@
             <plugin>
                 <groupId>com.icfolson.maven.plugins</groupId>
                 <artifactId>aem-package-maven-plugin</artifactId>
-                <version>0.6.0</version>
+                <version>${package.plugin.version}</version>
                 <executions>
                     <execution>
                         <phase>install</phase>
@@ -158,6 +159,7 @@
             <plugin>
                 <groupId>com.icfolson.maven.plugins</groupId>
                 <artifactId>osgi-bundle-status-maven-plugin</artifactId>
+                <version>${osgi.bundle.status.plugin.version}</version>
                 <executions>
                     <execution>
                         <id>status-author</id>
