@@ -65,6 +65,12 @@
             <classifier>apis</classifier>
         </dependency>
 
+        <!-- Third Party -->
+        <dependency>
+            <groupId>org.codehaus.groovy</groupId>
+            <artifactId>groovy-all</artifactId>
+        </dependency>
+
         <!-- AEM Library -->
         <dependency>
             <groupId>com.icfolson.aem.library</groupId>

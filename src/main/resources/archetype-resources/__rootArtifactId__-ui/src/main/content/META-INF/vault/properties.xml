@@ -11,7 +11,7 @@
 	<entry key="lastModifiedBy">${symbol_dollar}{aem.username}</entry>
 	<entry key="created">${symbol_dollar}{timestamp}</entry>
 	<entry key="buildCount">1</entry>
-	<entry key="version" />
+	<entry key="version">${symbol_dollar}{project.version}</entry>
 	<entry key="dependencies" />
 	<entry key="packageFormatVersion">2</entry>
 	<entry key="lastWrapped">${symbol_dollar}{timestamp}</entry>

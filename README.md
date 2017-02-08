@@ -4,7 +4,7 @@ For use with AEM 6.2
 
 AEM Library
 -----------
-Currently using library version 8.0.0
+Currently using library version 8.0.2
 
 CQ Component Maven Plugin
 ----------
