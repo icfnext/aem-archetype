@@ -1,13 +1,12 @@
-package ${package}.annotation;
+package ${package}.annotations
 
 import groovy.transform.AnnotationCollector
 import com.citytechinc.cq.component.annotations.Component
-
 import org.apache.sling.api.resource.Resource
 import org.apache.sling.models.annotations.Model
 
 @AnnotationCollector
-@Component("")
-@Model(adaptables = Resource.class)
+@Component(group = "")
+@Model(adaptables = Resource)
 @interface AEMComponent{
 }

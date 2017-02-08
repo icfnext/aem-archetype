@@ -41,8 +41,9 @@
             <build>
                 <plugins>
                     <plugin>
-                        <groupId>com.citytechinc.maven.plugins</groupId>
+                        <groupId>com.icfolson.maven.plugins</groupId>
                         <artifactId>osgi-bundle-status-maven-plugin</artifactId>
+                        <version>${osgi.bundle.status.plugin.version}</version>
                         <executions>
                             <execution>
                                 <id>status-publish</id>
@@ -135,9 +136,9 @@
                 </configuration>
             </plugin>
             <plugin>
-                <groupId>com.citytechinc.maven.plugins</groupId>
-                <artifactId>cq-package-maven-plugin</artifactId>
-                <version>0.4.0</version>
+                <groupId>com.icfolson.maven.plugins</groupId>
+                <artifactId>aem-package-maven-plugin</artifactId>
+                <version>${package.plugin.version}</version>
                 <executions>
                     <execution>
                         <phase>install</phase>
@@ -156,8 +157,9 @@
                 </configuration>
             </plugin>
             <plugin>
-                <groupId>com.citytechinc.maven.plugins</groupId>
+                <groupId>com.icfolson.maven.plugins</groupId>
                 <artifactId>osgi-bundle-status-maven-plugin</artifactId>
+                <version>${osgi.bundle.status.plugin.version}</version>
                 <executions>
                     <execution>
                         <id>status-author</id>
@@ -192,8 +194,8 @@
             <type>zip</type>
         </dependency>
         <dependency>
-            <groupId>com.citytechinc.aem.bedrock</groupId>
-            <artifactId>bedrock-ui</artifactId>
+            <groupId>com.icfolson.aem.library</groupId>
+            <artifactId>aem-library-ui</artifactId>
             <type>zip</type>
         </dependency>
     </dependencies>

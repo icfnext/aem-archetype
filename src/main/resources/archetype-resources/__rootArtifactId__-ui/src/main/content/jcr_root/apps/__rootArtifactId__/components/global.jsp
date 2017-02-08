@@ -1,1 +1,1 @@
-<%@include file="/apps/bedrock/components/global.jsp"%>
+<%@include file="/apps/aem-library/components/global.jsp"%>
