@@ -92,7 +92,7 @@
             <version>${component.plugin.version}</version>
         </dependency>
         <dependency>
-            <groupId>com.citytechinc.aem</groupId>
+            <groupId>com.icfolson.aem</groupId>
             <artifactId>multicomposite-addon</artifactId>
         </dependency>
     </dependencies>
