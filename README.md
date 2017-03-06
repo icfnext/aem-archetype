@@ -10,8 +10,8 @@ For use with AEM 6.2
 
 | Dependency  | Version |
 | ----------- | ------- |
-| AEM Library | 8.0.2  |
-| Multicomposite Add On | 2.1.3 |
+| AEM Library | 8.1.0 |
+| Multicomposite Add On | 3.0.0 |
 | CQ Component Maven Plugin | 4.2.0 |
 | OSGi Bundle Status Maven Plugin | 2.0.2 |
 | AEM Package Maven Plugin | 0.6.0 |

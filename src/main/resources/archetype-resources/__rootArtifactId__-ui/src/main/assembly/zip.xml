@@ -43,7 +43,7 @@
             <useProjectArtifact>false</useProjectArtifact>
             <scope>compile</scope>
             <includes>
-                <include>com.citytechinc.aem:multicomposite-addon:zip</include>
+                <include>com.icfolson.aem:multicomposite-addon:zip</include>
             </includes>
             <useStrictFiltering>true</useStrictFiltering>
         </dependencySet>
