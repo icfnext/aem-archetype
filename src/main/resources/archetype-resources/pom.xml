@@ -6,7 +6,7 @@
     <parent>
         <groupId>com.icfolson.aem.library</groupId>
         <artifactId>aem-library</artifactId>
-        <version>9.0.0</version>
+        <version>9.2.0</version>
     </parent>
 
     <modelVersion>4.0.0</modelVersion>
@@ -25,9 +25,9 @@
         <core.artifactId>${rootArtifactId}-core</core.artifactId>
 
         <!-- versions -->
-        <aem.library.version>9.0.0</aem.library.version>
-        <multicompositeaddon.version>3.2.0</multicompositeaddon.version>
-        <component.plugin.version>4.3.0</component.plugin.version>
+        <aem.library.version>9.2.0</aem.library.version>
+        <multicompositeaddon.version>3.2.2</multicompositeaddon.version>
+        <component.plugin.version>5.0.1</component.plugin.version>
         <package.plugin.version>0.6.0</package.plugin.version>
         <osgi.bundle.status.plugin.version>2.0.2</osgi.bundle.status.plugin.version>
 

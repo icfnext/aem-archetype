@@ -4,15 +4,15 @@
 
 ## Compatibility
 
-For use with AEM 6.2
+For use with AEM 6.3
 
 ## Dependency Versions
 
 | Dependency  | Version |
 | ----------- | ------- |
-| AEM Library | 8.1.0 |
-| Multicomposite Add On | 3.0.0 |
-| CQ Component Maven Plugin | 4.2.0 |
+| AEM Library | 9.2.0 |
+| Multicomposite Add On | 3.2.2 |
+| CQ Component Maven Plugin | 5.0.1 |
 | OSGi Bundle Status Maven Plugin | 2.0.2 |
 | AEM Package Maven Plugin | 0.6.0 |
 
