@@ -29,7 +29,7 @@
                         <Bundle-Name>${project.name}</Bundle-Name>
                         <Bundle-Vendor>${project.parent.organization.name}</Bundle-Vendor>
                         <Export-Package>!*.impl,${package}.*</Export-Package>
-                        <Import-Package>!com.icfolson.aem.library.core.components.*,!javassist</Import-Package>
+                        <Import-Package>!com.citytechinc.cq.component.*</Import-Package>
                         <Require-Bundle>org.apache.sling.models.api</Require-Bundle>
                         <Sling-Model-Packages>${package}</Sling-Model-Packages>
                         <DynamicImport-Package>*</DynamicImport-Package>

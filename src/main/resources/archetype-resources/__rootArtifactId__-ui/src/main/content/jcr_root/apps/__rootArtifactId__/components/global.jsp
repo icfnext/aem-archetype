@@ -1,1 +1,0 @@
-<%@include file="/apps/aem-library/components/global.jsp"%>
