@@ -4,7 +4,7 @@
 
     <groupId>com.icfolson.aem</groupId>
     <artifactId>aem-maven-archetype</artifactId>
-    <version>3.0.0-SNAPSHOT</version>
+    <version>3.0.0</version>
     <packaging>maven-archetype</packaging>
     <name>aem-maven-archetype</name>
     <description>Maven archetype for AEM projects that utilize the ICF Olson AEM Library.</description>
@@ -66,6 +66,30 @@
             </plugins>
         </pluginManagement>
         <plugins>
+            <plugin>
+                <artifactId>maven-gpg-plugin</artifactId>
+                <version>1.6</version>
+                <executions>
+                    <execution>
+                        <phase>deploy</phase>
+                        <goals>
+                            <goal>sign</goal>
+                        </goals>
+                    </execution>
+                </executions>
+            </plugin>
+            <plugin>
+                <artifactId>maven-deploy-plugin</artifactId>
+                <version>2.8.2</version>
+                <executions>
+                    <execution>
+                        <phase>deploy</phase>
+                        <goals>
+                            <goal>deploy</goal>
+                        </goals>
+                    </execution>
+                </executions>
+            </plugin>
             <plugin>
                 <groupId>external.atlassian.jgitflow</groupId>
                 <artifactId>jgitflow-maven-plugin</artifactId>
