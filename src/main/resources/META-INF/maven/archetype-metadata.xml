@@ -4,8 +4,7 @@
     xmlns="http://maven.apache.org/plugins/maven-archetype-plugin/archetype-descriptor/1.0.0"
     xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
     <requiredProperties>
-        <requiredProperty key="clientPrettyName">
-        </requiredProperty>
+        <requiredProperty key="clientPrettyName"/>
     </requiredProperties>
     <fileSets>
         <fileSet encoding="UTF-8">
@@ -42,18 +41,22 @@
                 </fileSet>
             </fileSets>
         </module>
-        <module id="${rootArtifactId}-ui" dir="__rootArtifactId__-ui" name="${rootArtifactId}-ui">
+        <module id="${rootArtifactId}-ui" dir="__rootArtifactId__-ui" name="${rootArtifactId}-ui.apps">
             <fileSets>
-                <fileSet filtered="true" encoding="UTF-8">
-                    <directory>src/main/assembly</directory>
-                    <includes>
-                        <include>**/*.xml</include>
-                    </includes>
-                </fileSet>
                 <fileSet filtered="true" encoding="UTF-8">
                     <directory>src/main/content</directory>
                     <includes>
-                        <include>**/*.jsp</include>
+                        <include>**/*.html</include>
+                        <include>**/*.xml</include>
+                    </includes>
+                </fileSet>
+            </fileSets>
+        </module>
+        <module id="${rootArtifactId}-ui" dir="__rootArtifactId__-ui" name="${rootArtifactId}-ui.content">
+            <fileSets>
+                <fileSet filtered="true" encoding="UTF-8">
+                    <directory>src/main/content</directory>
+                    <includes>
                         <include>**/*.html</include>
                         <include>**/*.xml</include>
                     </includes>
