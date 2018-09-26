@@ -3,6 +3,6 @@
 #set( $symbol_escape = '\' )
 <?xml version="1.0" encoding="UTF-8"?>
 <workspaceFilter version="1.0">
-    <filter root="/conf/${rootArtifactId}" mode="merge"/>
-    <filter root="/content/${rootArtifactId}" mode="merge"/>
+    <filter root="/apps/${rootArtifactId}"/>
+    <filter root="/apps/sling"/>
 </workspaceFilter>
