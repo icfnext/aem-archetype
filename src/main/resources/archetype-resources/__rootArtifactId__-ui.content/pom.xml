@@ -81,13 +81,4 @@
             </plugin>
         </plugins>
     </build>
-
-    <dependencies>
-        <!-- TODO: remove? -->
-        <dependency>
-            <groupId>${project.groupId}</groupId>
-            <artifactId>${core.artifactId}</artifactId>
-            <version>${project.version}</version>
-        </dependency>
-    </dependencies>
 </project>
