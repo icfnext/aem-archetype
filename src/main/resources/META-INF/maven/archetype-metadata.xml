@@ -21,7 +21,7 @@
                 <fileSet packaged="true" encoding="UTF-8" filtered="true">
                     <directory>src/main/groovy</directory>
                 </fileSet>
-                <fileSet packaged="true" encoding="UTF-8" filtered="true">
+                <fileSet encoding="UTF-8">
                     <directory>src/main/java/</directory>
                 </fileSet>
                 <fileSet filtered="true" encoding="UTF-8">
@@ -30,29 +30,27 @@
                         <include>**/*.xml</include>
                     </includes>
                 </fileSet>
-                <fileSet packaged="true" encoding="UTF-8">
-                    <directory>src/test/java</directory>
-                </fileSet>
-                <fileSet packaged="true" encoding="UTF-8">
+                <fileSet packaged="true" encoding="UTF-8" filtered="true">
                     <directory>src/test/groovy</directory>
                 </fileSet>
                 <fileSet encoding="UTF-8">
-                    <directory>src/test/resources</directory>
+                    <directory>src/test/java</directory>
                 </fileSet>
             </fileSets>
         </module>
-        <module id="${rootArtifactId}-ui" dir="__rootArtifactId__-ui" name="${rootArtifactId}-ui.apps">
+        <module id="${rootArtifactId}-ui.apps" dir="__rootArtifactId__-ui.apps" name="${rootArtifactId}-ui.apps">
             <fileSets>
                 <fileSet filtered="true" encoding="UTF-8">
                     <directory>src/main/content</directory>
                     <includes>
                         <include>**/*.html</include>
                         <include>**/*.xml</include>
+                        <include>**/*.less</include>
                     </includes>
                 </fileSet>
             </fileSets>
         </module>
-        <module id="${rootArtifactId}-ui" dir="__rootArtifactId__-ui" name="${rootArtifactId}-ui.content">
+        <module id="${rootArtifactId}-ui.content" dir="__rootArtifactId__-ui.content" name="${rootArtifactId}-ui.content">
             <fileSets>
                 <fileSet filtered="true" encoding="UTF-8">
                     <directory>src/main/content</directory>

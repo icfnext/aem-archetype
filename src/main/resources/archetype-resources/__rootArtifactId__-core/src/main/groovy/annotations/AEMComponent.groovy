@@ -9,6 +9,6 @@ import org.apache.sling.models.annotations.Model
 @AnnotationCollector
 @Component(value = "Component")
 @Model(adaptables = Resource, defaultInjectionStrategy = DefaultInjectionStrategy.OPTIONAL)
-@interface AEMComponent{
+@interface AEMComponent {
 
 }
