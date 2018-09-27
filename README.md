@@ -17,7 +17,7 @@ For use with AEM 6.4.
 
 ## Example Usage
 
-`mvn archetype:generate -DarchetypeGroupId=com.icfolson.aem -DarchetypeArtifactId=aem-maven-archetype -DarchetypeVersion=4.0.0 -DgroupId=com.clientname -DartifactId=clientname -DclientPrettyName="The Name of The Client" -Dversion=1.0.0-SNAPSHOT -DinteractiveMode=false`
+`mvn archetype:generate -DarchetypeGroupId=com.icfolson.aem -DarchetypeArtifactId=aem-maven-archetype -DarchetypeVersion=4.0.0 -DgroupId=com.clientname.aem -DartifactId=clientname -Dpackage=com.icfolson.aem.clientname.core -DclientPrettyName="The Name of The Client" -Dversion=1.0.0-SNAPSHOT -DinteractiveMode=false`
 
 ## Versioning
 

@@ -42,62 +42,43 @@
         <sling.password>admin</sling.password>
         <vault.user>admin</vault.user>
         <vault.password>admin</vault.password>
+        <package.group>${rootArtifactId}</package.group>
         <osgi.bundle.status.skip>true</osgi.bundle.status.skip>
     </properties>
 
-    <profiles>
-        <profile>
-            <id>adobe-public</id>
-            <activation>
-                <activeByDefault>true</activeByDefault>
-            </activation>
-            <properties>
-                <releaseRepository-Id>adobe-public-releases</releaseRepository-Id>
-                <releaseRepository-Name>Adobe Public Releases</releaseRepository-Name>
-                <releaseRepository-URL>https://repo.adobe.com/nexus/content/groups/public</releaseRepository-URL>
-            </properties>
-            <repositories>
-                <repository>
-                    <id>adobe-public-releases</id>
-                    <name>Adobe Public Repository</name>
-                    <url>https://repo.adobe.com/nexus/content/groups/public</url>
-                    <releases>
-                        <enabled>true</enabled>
-                        <updatePolicy>never</updatePolicy>
-                    </releases>
-                    <snapshots>
-                        <enabled>false</enabled>
-                    </snapshots>
-                </repository>
-            </repositories>
-            <pluginRepositories>
-                <pluginRepository>
-                    <id>adobe-public-releases</id>
-                    <name>Adobe Public Repository</name>
-                    <url>https://repo.adobe.com/nexus/content/groups/public</url>
-                    <releases>
-                        <enabled>true</enabled>
-                        <updatePolicy>never</updatePolicy>
-                    </releases>
-                    <snapshots>
-                        <enabled>false</enabled>
-                    </snapshots>
-                </pluginRepository>
-            </pluginRepositories>
-        </profile>
+    <repositories>
+        <repository>
+            <id>adobe-public-releases</id>
+            <name>Adobe Public Repository</name>
+            <url>https://repo.adobe.com/nexus/content/groups/public</url>
+            <releases>
+                <enabled>true</enabled>
+                <updatePolicy>never</updatePolicy>
+            </releases>
+            <snapshots>
+                <enabled>false</enabled>
+            </snapshots>
+        </repository>
+    </repositories>
+    <pluginRepositories>
+        <pluginRepository>
+            <id>adobe-public-releases</id>
+            <name>Adobe Public Repository</name>
+            <url>https://repo.adobe.com/nexus/content/groups/public</url>
+            <releases>
+                <enabled>true</enabled>
+                <updatePolicy>never</updatePolicy>
+            </releases>
+            <snapshots>
+                <enabled>false</enabled>
+            </snapshots>
+        </pluginRepository>
+    </pluginRepositories>
 
+    <profiles>
         <!-- Development profile: install only the bundle -->
         <profile>
-            <id>autoInstallBundle</id>
-            <!--
-                To enable this feature for a bundle, the maven-sling-plugin
-                (without configuration) needs to be included:
-
-                <plugin>
-                    <groupId>org.apache.sling</groupId>
-                    <artifactId>maven-sling-plugin</artifactId>
-                </plugin>
-            -->
+            <id>install-bundle</id>
             <activation>
                 <activeByDefault>false</activeByDefault>
             </activation>
@@ -120,11 +101,10 @@
                 </pluginManagement>
             </build>
         </profile>
+
+        <!-- install package (author only) -->
         <profile>
-            <id>autoInstallPackage</id>
-            <activation>
-                <activeByDefault>false</activeByDefault>
-            </activation>
+            <id>install-package</id>
             <build>
                 <pluginManagement>
                     <plugins>
@@ -134,12 +114,10 @@
                             <executions>
                                 <execution>
                                     <id>install-package</id>
+                                    <phase>install</phase>
                                     <goals>
                                         <goal>install</goal>
                                     </goals>
-                                    <configuration>
-                                        <targetURL>http://${aem.host}:${aem.port}/crx/packmgr/service.jsp</targetURL>
-                                    </configuration>
                                 </execution>
                             </executions>
                         </plugin>
@@ -150,11 +128,10 @@
                 <osgi.bundle.status.skip>false</osgi.bundle.status.skip>
             </properties>
         </profile>
+
+        <!-- install and replicate package (author/publish) -->
         <profile>
-            <id>autoInstallPackagePublish</id>
-            <activation>
-                <activeByDefault>false</activeByDefault>
-            </activation>
+            <id>install-replicate-package</id>
             <build>
                 <pluginManagement>
                     <plugins>
@@ -163,19 +140,27 @@
                             <artifactId>content-package-maven-plugin</artifactId>
                             <executions>
                                 <execution>
-                                    <id>install-package-publish</id>
+                                    <id>install-package</id>
+                                    <phase>install</phase>
                                     <goals>
                                         <goal>install</goal>
                                     </goals>
-                                    <configuration>
-                                        <targetURL>http://${aem.publish.host}:${aem.publish.port}/crx/packmgr/service.jsp</targetURL>
-                                    </configuration>
+                                </execution>
+                                <execution>
+                                    <id>replicate-package</id>
+                                    <phase>install</phase>
+                                    <goals>
+                                        <goal>replicate</goal>
+                                    </goals>
                                 </execution>
                             </executions>
                         </plugin>
                     </plugins>
                 </pluginManagement>
             </build>
+            <properties>
+                <osgi.bundle.status.skip>false</osgi.bundle.status.skip>
+            </properties>
         </profile>
     </profiles>
 
@@ -259,9 +244,12 @@
                     <artifactId>content-package-maven-plugin</artifactId>
                     <version>0.5.1</version>
                     <configuration>
+                        <group>${package.group}</group>
+                        <filterSource>src/main/content/META-INF/vault/filter.xml</filterSource>
                         <targetURL>http://${aem.host}:${aem.port}/crx/packmgr/service.jsp</targetURL>
                         <failOnError>true</failOnError>
                         <failOnMissingEmbed>true</failOnMissingEmbed>
+                        <verbose>true</verbose>
                         <userId>${vault.user}</userId>
                         <password>${vault.password}</password>
                     </configuration>
@@ -269,11 +257,6 @@
                 <plugin>
                     <artifactId>maven-enforcer-plugin</artifactId>
                     <version>1.4.1</version>
-                </plugin>
-                <plugin>
-                    <groupId>org.codehaus.mojo</groupId>
-                    <artifactId>build-helper-maven-plugin</artifactId>
-                    <version>3.0.0</version>
                 </plugin>
             </plugins>
         </pluginManagement>

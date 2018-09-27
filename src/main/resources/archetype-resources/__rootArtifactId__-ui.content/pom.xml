@@ -70,10 +70,7 @@
                 <artifactId>content-package-maven-plugin</artifactId>
                 <extensions>true</extensions>
                 <configuration>
-                    <filterSource>src/main/content/META-INF/vault/filter.xml</filterSource>
-                    <verbose>false</verbose>
-                    <failOnError>true</failOnError>
-                    <group>${rootArtifactId}</group>
+                    <path>/etc/packages/${package.group}/${project.artifactId}-${project.version}.zip</path>
                     <properties>
                         <acHandling>merge_preserve</acHandling>
                     </properties>
