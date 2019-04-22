@@ -47,6 +47,7 @@
                         <include>**/*.xml</include>
                         <include>**/*.less</include>
                         <include>**/*.png</include>
+                        <include>**/*.txt</include>
                     </includes>
                 </fileSet>
             </fileSets>

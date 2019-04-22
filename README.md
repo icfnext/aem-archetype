@@ -6,14 +6,24 @@
 
 For use with AEM 6.4.
 
+Archetype Version(s) | AEM Version(s)
+------------ | -------------
+4.x.x | 6.3, 6.4, 6.5
+3.0.0 | 6.3
+2.x.x | 6.2
+1.3.0 | 6.1
+1.2.x, 1.1.0, 1.0.0 | 6.0
+
 ## Dependency Versions
 
 | Dependency  | Version |
 | ----------- | ------- |
-| AEM Library | 11.1.0 |
-| Multicomposite Add On | 4.0.0 |
-| CQ Component Maven Plugin | 5.1.0 |
+| AEM Core Components | 2.3.2 |
+| AEM Library | 12.0.0 |
+| CQ Component Maven Plugin | 6.4.0 |
 | OSGi Bundle Status Maven Plugin | 2.0.2 |
+| Prosper | 14.0.0 |
+
 
 ## Example Usage
 

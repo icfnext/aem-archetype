@@ -81,6 +81,8 @@
                     <componentPathBase>jcr_root/apps/${rootArtifactId}/components</componentPathBase>
                     <defaultComponentGroup>${clientPrettyName}</defaultComponentGroup>
                     <transformerName>lower-case</transformerName>
+                    <generateClassicUiDialogs>false</generateClassicUiDialogs>
+                    <useCoral3Dialogs>true</useCoral3Dialogs>
                     <additionalFeatures>
                         <additionalFeature>rte-touchui</additionalFeature>
                         <additionalFeature>tagspickerwidget</additionalFeature>
@@ -99,22 +101,32 @@
                             <artifactId>${core.artifactId}</artifactId>
                             <target>/apps/${rootArtifactId}/install</target>
                         </embedded>
+                        <embedded>
+                            <groupId>com.icfolson.aem.library</groupId>
+                            <artifactId>aem-library-core</artifactId>
+                            <target>/apps/waters/install</target>
+                            <excludeTransitive>true</excludeTransitive>
+                        </embedded>
+                        <embedded>
+                            <groupId>com.icfolson.aem.library</groupId>
+                            <artifactId>aem-library-api</artifactId>
+                            <target>/apps/waters/install</target>
+                        </embedded>
+                        <embedded>
+                            <groupId>com.icfolson.aem.library</groupId>
+                            <artifactId>aem-library-models</artifactId>
+                            <target>/apps/waters/install</target>
+                        </embedded>
+                        <embedded>
+                            <groupId>org.codehaus.groovy</groupId>
+                            <artifactId>groovy-all</artifactId>
+                            <target>/apps/waters/install</target>
+                        </embedded>
                     </embeddeds>
                     <subPackages>
                         <subPackage>
                             <groupId>com.adobe.cq</groupId>
                             <artifactId>core.wcm.components.all</artifactId>
-                            <filter>true</filter>
-                        </subPackage>
-                        <subPackage>
-                            <groupId>com.icfolson.aem.library</groupId>
-                            <artifactId>aem-library-ui</artifactId>
-                            <filter>true</filter>
-                        </subPackage>
-                        <subPackage>
-                            <groupId>com.icfolson.aem</groupId>
-                            <artifactId>multicomposite-addon</artifactId>
-                            <type>zip</type>
                             <filter>true</filter>
                         </subPackage>
                     </subPackages>
@@ -156,18 +168,24 @@
             <version>${project.version}</version>
         </dependency>
         <dependency>
-            <groupId>com.adobe.cq</groupId>
-            <artifactId>core.wcm.components.all</artifactId>
-            <type>zip</type>
-        </dependency>
-        <dependency>
-            <groupId>com.icfolson.aem</groupId>
-            <artifactId>multicomposite-addon</artifactId>
-            <type>zip</type>
+            <groupId>org.codehaus.groovy</groupId>
+            <artifactId>groovy-all</artifactId>
         </dependency>
         <dependency>
             <groupId>com.icfolson.aem.library</groupId>
-            <artifactId>aem-library-ui</artifactId>
+            <artifactId>aem-library-api</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>com.icfolson.aem.library</groupId>
+            <artifactId>aem-library-core</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>com.icfolson.aem.library</groupId>
+            <artifactId>aem-library-models</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>com.adobe.cq</groupId>
+            <artifactId>core.wcm.components.all</artifactId>
             <type>zip</type>
         </dependency>
     </dependencies>

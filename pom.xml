@@ -1,5 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
 
     <groupId>com.icfolson.aem</groupId>
@@ -10,23 +12,23 @@
     <description>Maven archetype for AEM projects that utilize the ICF Olson AEM Library.</description>
 
     <organization>
-        <name>ICF Olson</name>
-        <url>http://www.olsondigital.com</url>
+        <name>ICF Next</name>
+        <url>http://www.icfnext.com</url>
     </organization>
 
-    <url>https://github.com/OlsonDigital/aem-archetype</url>
+    <url>https://github.com/icfnext/aem-archetype</url>
 
     <scm>
-        <connection>scm:git:git@github.com:OlsonDigital/aem-archetype.git</connection>
-        <url>https://github.com/OlsonDigital/aem-archetype</url>
-        <developerConnection>scm:git:git@github.com:OlsonDigital/aem-archetype.git
+        <connection>scm:git:git@github.com:icfnext/aem-archetype.git</connection>
+        <url>https://github.com/icfnext/aem-archetype</url>
+        <developerConnection>scm:git:git@github.com:icfnext/aem-archetype.git
         </developerConnection>
     </scm>
 
     <developers>
         <developer>
             <name>Mark Daugherty</name>
-            <email>mark.daugherty@icfolson.com</email>
+            <email>mark.daugherty@icfnext.com</email>
         </developer>
     </developers>
 
@@ -99,15 +101,6 @@
                         </goals>
                     </execution>
                 </executions>
-            </plugin>
-            <plugin>
-                <groupId>external.atlassian.jgitflow</groupId>
-                <artifactId>jgitflow-maven-plugin</artifactId>
-                <version>1.0-m5.1</version>
-                <configuration>
-                    <autoVersionSubmodules>true</autoVersionSubmodules>
-                    <noDeploy>true</noDeploy>
-                </configuration>
             </plugin>
         </plugins>
     </build>

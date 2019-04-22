@@ -6,7 +6,7 @@
     <parent>
         <groupId>com.icfolson.aem.library</groupId>
         <artifactId>aem-library</artifactId>
-        <version>11.1.0</version>
+        <version>12.0.0</version>
     </parent>
 
     <modelVersion>4.0.0</modelVersion>
@@ -26,11 +26,10 @@
         <core.artifactId>${rootArtifactId}-core</core.artifactId>
 
         <!-- versions -->
-        <aem.library.version>11.1.0</aem.library.version>
-        <core.components.version>2.1.0</core.components.version>
-        <multicompositeaddon.version>4.0.0</multicompositeaddon.version>
-        <component.plugin.version>5.1.0</component.plugin.version>
-        <prosper.version>13.0.0</prosper.version>
+        <aem.library.version>12.0.0</aem.library.version>
+        <core.components.version>2.3.2</core.components.version>
+        <component.plugin.version>6.4.0</component.plugin.version>
+        <prosper.version>14.0.0</prosper.version>
         <osgi.bundle.status.plugin.version>2.0.2</osgi.bundle.status.plugin.version>
 
         <!-- defaults -->
@@ -292,17 +291,6 @@
                 <groupId>com.icfolson.aem.library</groupId>
                 <artifactId>aem-library-ui</artifactId>
                 <version>${aem.library.version}</version>
-                <type>zip</type>
-            </dependency>
-            <dependency>
-                <groupId>com.icfolson.aem</groupId>
-                <artifactId>multicomposite-addon</artifactId>
-                <version>${multicompositeaddon.version}</version>
-            </dependency>
-            <dependency>
-                <groupId>com.icfolson.aem</groupId>
-                <artifactId>multicomposite-addon</artifactId>
-                <version>${multicompositeaddon.version}</version>
                 <type>zip</type>
             </dependency>
             <dependency>
