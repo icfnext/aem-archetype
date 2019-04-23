@@ -1,0 +1,13 @@
+#set( $D = '$' )
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+<sly data-sly-use.clientLib="/libs/granite/sightly/templates/clientlib.html"
+     data-sly-call="${D}{clientlib.js @ categories='${rootArtifactId}.dependencies'}"/>
+<sly data-sly-use.clientLib="/libs/granite/sightly/templates/clientlib.html"
+     data-sly-call="${D}{clientlib.css @ categories='${rootArtifactId}.base'}"/>
+
+<!--/* Load authoring related client libraries */-->
+<sly data-sly-test="${D}{wcmmode.preview || wcmmode.edit}" data-sly-call="${D}{clientLib.all @ categories='${rootArtifactId}.author'}"/>
+
+<!--/* Include Context Hub */-->
+<sly data-sly-resource="${D}{'contexthub' @ resourceType='granite/contexthub/components/contexthub'}"/>
