@@ -6,7 +6,7 @@
 
     <groupId>com.icfolson.aem</groupId>
     <artifactId>aem-maven-archetype</artifactId>
-    <version>4.0.0-SNAPSHOT</version>
+    <version>4.0.0</version>
     <packaging>maven-archetype</packaging>
     <name>aem-maven-archetype</name>
     <description>Maven archetype for AEM projects that utilize the ICF Olson AEM Library.</description>
