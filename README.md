@@ -1,10 +1,8 @@
 # AEM Maven Archetype
 
-[Olson Digital](http://www.digitalatolson.com/)
+[ICF Next](http://www.icfnext.com/)
 
 ## Compatibility
-
-For use with AEM 6.4.
 
 Archetype Version(s) | AEM Version(s)
 ------------ | -------------
