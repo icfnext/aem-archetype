@@ -104,23 +104,23 @@
                         <embedded>
                             <groupId>com.icfolson.aem.library</groupId>
                             <artifactId>aem-library-core</artifactId>
-                            <target>/apps/waters/install</target>
+                            <target>/apps/${rootArtifactId}/install</target>
                             <excludeTransitive>true</excludeTransitive>
                         </embedded>
                         <embedded>
                             <groupId>com.icfolson.aem.library</groupId>
                             <artifactId>aem-library-api</artifactId>
-                            <target>/apps/waters/install</target>
+                            <target>/apps/${rootArtifactId}/install</target>
                         </embedded>
                         <embedded>
                             <groupId>com.icfolson.aem.library</groupId>
                             <artifactId>aem-library-models</artifactId>
-                            <target>/apps/waters/install</target>
+                            <target>/apps/${rootArtifactId}/install</target>
                         </embedded>
                         <embedded>
                             <groupId>org.codehaus.groovy</groupId>
                             <artifactId>groovy-all</artifactId>
-                            <target>/apps/waters/install</target>
+                            <target>/apps/${rootArtifactId}/install</target>
                         </embedded>
                     </embeddeds>
                     <subPackages>
